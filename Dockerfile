@@ -10,5 +10,6 @@ VOLUME /opt/sinopia/storage
 VOLUME /etc/sinopia
 WORKDIR /opt/sinopia
 RUN npm install --verbose sinopia@1.0.1
+RUN npm uninstall fs-ext
 
 CMD ["node", "/opt/sinopia/node_modules/sinopia/bin/sinopia", "--config", "/etc/sinopia/config.yaml"]
